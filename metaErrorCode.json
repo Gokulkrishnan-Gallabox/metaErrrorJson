@@ -1,0 +1,740 @@
+[
+  {
+    "errorcode": 0,
+    "title": "<p><code>0</code> - AuthException</p>",
+    "description": "<p>We were unable to authenticate the app user.</p>\n",
+    "possibleSolutions": "<p>Typically this means the included access token has expired, been invalidated, or the app user has changed a setting to prevent all apps from accessing their data. We recommend that you <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/business-management-api/get-started#system-user-access-tokens\">get a new access token</a>.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 3,
+    "title": "<p><code>3</code> - API Method</p>",
+    "description": "<p>Capability or permissions issue.</p>\n",
+    "possibleSolutions": "<p>Use the <a target=\"_blank\" href=\"https://developers.facebook.com/tools/debug/accesstoken\">access token debugger</a> to verify that your app has been granted the permissions required by the endpoint. See <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/support/troubleshooting#authentication-authorization\">Troubleshooting</a>.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 10,
+    "title": "<p><code>10</code> - Permission Denied</p>",
+    "description": "<p>Permission is either not granted or has been removed.</p>\n",
+    "possibleSolutions": "<p>Use the <a target=\"_blank\" href=\"https://developers.facebook.com/tools/debug/accesstoken\">access token debugger</a> to verify that your app has been granted the permissions required by the endpoint. See <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/support/troubleshooting#authentication-authorization\">Troubleshooting</a>.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 190,
+    "title": "<p><code>190</code> - Access token has expired</p>",
+    "description": "<p>Your access token has expired.</p>\n",
+    "possibleSolutions": "<p><a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/get-started#get-access-token\">Get a new access token</a>.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 200,
+    "title": "<p><code>200</code> - API Permission</p>",
+    "description": "<p>Permission is either not granted or has been removed.</p>\n",
+    "possibleSolutions": "<p>Use the <a target=\"_blank\" href=\"https://developers.facebook.com/tools/debug/accesstoken\">access token debugger</a> to verify that your app has been granted the permissions required by the endpoint. See <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/support/troubleshooting#authentication-authorization\">Troubleshooting</a>.</p>\n",
+    "src": "cloudapi"
+  },
+
+  {
+    "errorcode": 4,
+    "title": "<p><code>4</code> - API Too Many Calls</p>",
+    "description": "<p>The app has reached its API call rate limit.</p>\n",
+    "possibleSolutions": "<p>Load the app in the <a target=\"_blank\" href=\"https://developers.facebook.com/docs/apps\">App Dashboard</a> and view the <strong>Application Rate Limit</strong> section to verify that the app has reached its <a target=\"_blank\" href=\"https://developers.facebook.com/docs/graph-api/overview/rate-limiting#wa-biz-api\">rate limit</a>. If it has, try again later or reduce the frequency or amount of API queries the app is making.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 80007,
+    "title": "<p><code>80007</code> - Rate limit issues</p>",
+    "description": "<p>The WhatsApp Business Account has reached its rate limit.</p>\n",
+    "possibleSolutions": "<p>See WhatsApp Business Account <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/overview/#rate-limits\">Rate Limits</a>. Try again later or reduce the frequency or amount of API queries the app is making.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 130429,
+    "title": "<p><code>130429</code> - Rate limit hit</p>",
+    "description": "<p>Cloud API message throughput has been reached.</p>\n",
+    "possibleSolutions": "<p>The app has reached the API's throughput limit. See <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/overview/#throughput\">Throughput</a>. Try again later or reduce the frequency with which the app sends messages.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131048,
+    "title": "<p><code>131048</code> - Spam rate limit hit</p>",
+    "description": "<p>Message failed to send because there are restrictions on how many messages can be sent from this phone number. This may be because too many previous messages were blocked or flagged as spam.</p>\n",
+    "possibleSolutions": "<p>Check your quality status in the WhatsApp Manager and see the <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/messaging-limits#quality-rating-and-messaging-limits\">Quality-Based Rate Limits</a> documentation for more information.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131056,
+    "title": "<p><code>131056</code> - (Business Account, Consumer Account) pair rate limit hit</p>",
+    "description": "<p>Too many messages sent from the sender phone number to the same recipient phone number in a short period of time.</p>\n",
+    "possibleSolutions": "<p>Wait and retry the operation, if you intend to send messages to the same phone number. You can still send messages to a different phone number without waiting</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 368,
+    "title": "<p><code>368</code> - Temporarily blocked for policies violations</p>",
+    "description": "<p>The WhatsApp Business Account associated with the app has been restricted or disabled for violating a platform policy.</p>\n",
+    "possibleSolutions": "<p>See the <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/overview/policy-enforcement\">Policy Enforcement</a> document to learn about policy violations and how to resolve them.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131031,
+    "title": "<p><code>131031</code> - Account has been locked</p>",
+    "description": "<p>The WhatsApp Business Account associated with the app has been restricted or disabled for violating a platform policy, or we were unable to verify data included in the request against data set on the WhatsApp Business Account (e.g, the two-step pin included in the request is incorrect).</p>\n",
+    "possibleSolutions": "<p>See the <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/overview/policy-enforcement\">Policy Enforcement</a> document to learn about policy violations and how to resolve them.</p>\n",
+    "src": "cloudapi"
+  },
+
+  {
+    "errorcode": 1,
+    "title": "<p><code>1</code> - API Unknown</p>",
+    "description": "<p>Invalid request or possible server error.</p>\n",
+    "possibleSolutions": "<p>Check the <a target=\"_blank\" href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api&amp;h=AT2kyJ3C2Aq5QvkdgXgDRYs56bJ7CzzagfOzZLv0L4SJ7LfJqWoRcubZBxdVXl9sxU95PSIx2HZMAdwA34sjQBwAipDrRDlPTbzqBa9KOBKpC2JK_RQlL278SEi_k9acysAqD2aINCy21KYLkXnwjA\">WhatsApp Business Platform Status</a> page to see API status information. If there are no server outages, check the endpoint <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference\">reference</a> and verify that your request is formatted correctly and meets all endpoint requirements.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 2,
+    "title": "<p><code>2</code> - API Service</p>",
+    "description": "<p>Temporary due to downtime or due to being overloaded.</p>\n",
+    "possibleSolutions": "<p>Check the <a target=\"_blank\" href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api&amp;h=AT2CbV8O9L4e-hycoUpXNR3a2nimTtvQjoNYdLl-Db7UKs6u6s8_8D-HMZ0608yqdU0Iq5_ABX83CJ5ZA971XRCaPDibsFUrq_M0CImdWHLsRYreq4-OWYboDJ_UkmT3bY9MJOwr7A5cPJ6cBGddog\">WhatsApp Business Platform Status</a> page to see API status information before trying again.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 33,
+    "title": "<p><code>33</code> - Parameter value is not valid</p>",
+    "description": "<p>The business phone number has been deleted.</p>\n",
+    "possibleSolutions": "<p>Verify that the business phone number is correct.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 100,
+    "title": "<p><code>100</code> - Invalid parameter</p>",
+    "description": "<p>The request included one or more unsupported or misspelled parameters.</p>\n",
+    "possibleSolutions": "<p>See the endpoint's <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference\">reference</a> to determine which parameters are supported and how they are spelled.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 130472,
+    "title": "<p><code>130472</code></p>\n<p>User's number is part of an experiment</p>",
+    "description": "<p>Message was not sent as part of an <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/guides/experiments\">experiment</a>.</p>\n",
+    "possibleSolutions": "<p>See <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/guides/experiments#marketing-message-experiment\">Marketing Message Experiment</a>.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131000,
+    "title": "<p><code>131000</code> - Something went wrong</p>",
+    "description": "<p>Message failed to send due to an unknown error.</p>\n",
+    "possibleSolutions": "<p>Try again. If the error persists,  open a <a target=\"_blank\" href=\"https://business.facebook.com/direct-support\">Direct Support</a> ticket.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131005,
+    "title": "<p><code>131005</code> - Access denied</p>",
+    "description": "<p>Permission is either not granted or has been removed.</p>\n",
+    "possibleSolutions": "<p>Use the <a target=\"_blank\" href=\"https://developers.facebook.com/tools/debug/accesstoken\">access token debugger</a> to verify that your app has been granted the permissions required by the endpoint. See <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/support/troubleshooting#authentication-authorization\">Troubleshooting</a>.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131008,
+    "title": "<p><code>131008</code> - Required parameter is missing</p>",
+    "description": "<p>The request is missing a required parameter.</p>\n",
+    "possibleSolutions": "<p>See the endpoint's <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference\">reference</a> to determine which parameters are required.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131009,
+    "title": "<p><code>131009</code> - Parameter value is not valid</p>",
+    "description": "<p>One or more parameter values are invalid.</p>\n",
+    "possibleSolutions": "<p>See the endpoint's <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference\">reference</a> to determine which values are supported for each parameter, and see <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/phone-numbers\">Phone Numbers</a> to learn how to add a phone number to a WhatsApp Business Account.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131016,
+    "title": "<p><code>131016</code> - Service unavailable</p>",
+    "description": "<p>A service is temporarily unavailable.</p>\n",
+    "possibleSolutions": "<p>Check the <a target=\"_blank\" href=\"https://metastatus.com/whatsapp-business-api\">WhatsApp Business Platform Status</a> page to see API status information before trying again.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131021,
+    "title": "<p><code>131021</code> - Recipient cannot be sender</p>",
+    "description": "<p>Sender and recipient phone number is the same.</p>\n",
+    "possibleSolutions": "<p>Send a message to a phone number different from the sender.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131026,
+    "title": "<p><code>131026</code> - Message Undeliverable</p>",
+    "description": "<p>Unable to deliver message. Reasons can include:</p>\n<br><ul>\n<li>The recipient phone number is not a WhatsApp phone number.</li>\n<li>Recipient has not accepted our new Terms of Service and Privacy Policy.</li>\n<li>Recipient using an old WhatsApp version; must use the following WhatsApp version or greater:\n\n<ul>\n<li>Android: 2.21.15.15</li>\n<li>SMBA: 2.21.15.15</li>\n<li>iOS: 2.21.170.4</li>\n<li>SMBI: 2.21.170.4</li>\n<li>KaiOS: 2.2130.10</li>\n<li>Web: 2.2132.6</li>\n</ul></li>\n</ul>\n",
+    "possibleSolutions": "<p>Confirm with the recipient that they agree to be contacted by you over WhatsApp and are using the latest version of WhatsApp.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131042,
+    "title": "<p><code>131042</code> - Business eligibility payment issue</p>",
+    "description": "<p>Message failed to send because there were one or more errors related to your payment method.</p>\n",
+    "possibleSolutions": "<p>See <a target=\"_blank\" href=\"https://www.facebook.com/business/help/2225184664363779\">About Billing For Your WhatsApp Business Account</a> and verify that you have set up billing correctly.</p>\n<br><p>Common problems:</p>\n<br><ul>\n<li>Payment account is not attached to a WhatsApp Business Account</li>\n<li>Credit line is over the limit</li>\n<li>Credit line (Payment Account) not set or active</li>\n<li>WhatsApp Business Account is deleted</li>\n<li>WhatsApp Business Account is suspended</li>\n<li>Timezone not set</li>\n<li>Currency not set</li>\n<li>MessagingFor request (On Behalf Of) is pending or declined</li>\n<li>Exceeded conversation free tier threshold without a valid payment method</li>\n</ul>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131045,
+    "title": "<p><code>131045</code> - Incorrect certificate</p>",
+    "description": "<p>Message failed to send due to a phone number registration error.</p>\n",
+    "possibleSolutions": "<p><a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference/registration\">Register the phone number</a> before trying again.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131047,
+    "title": "<p><code>131047</code> - Re-engagement message</p>",
+    "description": "<p>More than 24 hours have passed since the recipient last replied to the sender number.</p>\n",
+    "possibleSolutions": "<p>Send the recipient a business-initiated message using a <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates\">message template</a> instead.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131051,
+    "title": "<p><code>131051</code> - Unsupported message type</p>",
+    "description": "<p>Unsupported message type.</p>\n",
+    "possibleSolutions": "<p>See <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference/messages\">Messages</a> for supported message types before trying again with a supported message type.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131052,
+    "title": "<p><code>131052</code> - Media download error</p>",
+    "description": "<p>Unable to download the media sent by the user.</p>\n",
+    "possibleSolutions": "<p>We were unable to download the media for one or more reasons, such as an <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference/media#supported-media-types\">unsupported media type</a>. Refer to the <code>error.error_data.details</code> value for more information about why we were unable to download the media.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 131053,
+    "title": "<p><code>131053</code> - Media upload error</p>",
+    "description": "<p>Unable to upload the media used in the message.</p>\n",
+    "possibleSolutions": "<p>We were unable to upload the media for one or more reasons, such as an <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference/media#supported-media-types\">unsupported media type</a>. Refer to the <code>error.error_data.details</code> value for more information about why we were unable to upload the media.</p>\n<br><p>For more reliable performance when sending media, refer to <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-messages#media-http-caching\">Media HTTP Caching</a> and <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference/media#upload-media\">uploading the media</a>.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 132000,
+    "title": "<p><code>132000</code> - Template Param Count Mismatch</p>",
+    "description": "<p>The number of variable parameter values included in the request did not match the number of variable parameters defined in the template.</p>\n",
+    "possibleSolutions": "<p>See <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/message-templates/guidelines\">Message Template Guidelines</a> and make sure the request includes all of the variable parameter values that have been defined in the template.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 132001,
+    "title": "<p><code>132001</code> - Template does not exist</p>",
+    "description": "<p>The template does not exist in the specified language or the template has not been approved.</p>\n",
+    "possibleSolutions": "<p>Make sure your template has been approved and the template name and language locale are correct. Please ensure you follow <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/message-templates/guidelines\">message template guidelines</a>.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 132005,
+    "title": "<p><code>132005</code> - Template Hydrated Text Too Long</p>",
+    "description": "<p>Translated text is too long.</p>\n",
+    "possibleSolutions": "<p>Check the WhatsApp Manager to verify that your template has been translated. See <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/message-templates/guidelines/#quality-rating-and-template-status\">Quality Rating and Template Status</a>.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 132007,
+    "title": "<p><code>132007</code> - Template Format Character Policy Violated</p>",
+    "description": "<p>Template content violates a WhatsApp policy.</p>\n",
+    "possibleSolutions": "<p>See <a target=\"_blank\" href=\"/docs/whatsapp/message-templates/guidelines/#rejection-reasons\">Rejection Reasons</a> to determine possible reasons for violation.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 132012,
+    "title": "<p><code>132012</code> - Template Parameter Format Mismatch</p>",
+    "description": "<p>Variable parameter values formatted incorrectly.</p>\n",
+    "possibleSolutions": "<p>The variable parameter values included in the request are not using the format specified in the template. See <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/message-templates/guidelines\">Message Template Guidelines</a>.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 132015,
+    "title": "<p><code>132015</code> - Template is Paused</p>",
+    "description": "<p>Template is paused due to <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/message-templates/guidelines#quality-rating\">low quality</a> so it cannot be sent in a template message.</p>\n",
+    "possibleSolutions": "<p><a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/business-management-api/message-templates#edit-a-message-template\">Edit the template</a> to improve its quality and try again once it is approved.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 132016,
+    "title": "<p><code>132016</code> - Template is Disabled</p>",
+    "description": "<p>Template has been paused too many times due to <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/message-templates/guidelines#quality-rating\">low quality</a> and is now permanently disabled.</p>\n",
+    "possibleSolutions": "<p>Create a new template with different content.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 133000,
+    "title": "<p><code>133000</code> - Incomplete Deregistration</p>",
+    "description": "<p>A previous deregistration attempt failed.</p>\n",
+    "possibleSolutions": "<p><a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference/registration#deregister-phone\">Deregister</a> the number again before <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference/registration\">registering</a>.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 133004,
+    "title": "<p><code>133004</code> - Server Temporarily Unavailable</p>",
+    "description": "<p>Server is temporarily unavailable.</p>\n",
+    "possibleSolutions": "<p>Check the <a target=\"_blank\" href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fmetastatus.com%2Fwhatsapp-business-api&amp;h=AT0bNhVO6qgCk7lnflAsAY4yeszmmb4Haf8epYQaqSbjpXxCc3cP9zPC7vc-08TN9aGoaKZstwE-n5ItNAUw5WDYyJMxVopmcABl6CGLgE6LD2myzIHk-ANGvhM947XQH_FlcU5ndC6SNiht2OiPUA\">WhatsApp Business Platform Status</a> page to see API status information and check the response <code>details</code> value before trying again.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 133005,
+    "title": "<p><code>133005</code> - Two step verification PIN Mismatch</p>",
+    "description": "<p>Two-step verification PIN incorrect.</p>\n",
+    "possibleSolutions": "<p>Verify that the two-step verification PIN included in the request is correct.</p>\n<br><p>To reset the two-step verification PIN:</p>\n<br><ol>\n<li><a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/phone-numbers#resetting-two-step-verification-pin-in-whatsapp-manager\">Disable two-step verification</a>.</li>\n<li>Send a POST request that includes the new PIN to the <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference/two-step-verification\">Phone Number</a> endpoint.</li>\n</ol>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 133006,
+    "title": "<p><code>133006</code> - Phone number re-verification needed</p>",
+    "description": "<p>Phone number needs to be verified before registering.</p>\n",
+    "possibleSolutions": "<p><a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference/phone-numbers#verify\">Verify the phone number</a> before registering it.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 133008,
+    "title": "<p><code>133008</code> - Too Many two step verification PIN Guesses</p>",
+    "description": "<p>Too many two-step verification PIN guesses for this phone number.</p>\n",
+    "possibleSolutions": "<p>Try again after the amount of time specified in the <code>details</code> response value.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 133009,
+    "title": "<p><code>133009</code> - Two step verification PIN Guessed Too Fast</p>",
+    "description": "<p>Two-step verification PIN was entered too quickly.</p>\n",
+    "possibleSolutions": "<p>Check the <code>details</code> response value before trying again.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 133010,
+    "title": "<p><code>133010</code> - Phone number Not Registered</p>",
+    "description": "<p>Phone number not registered on the Whatsapp Business Platform.</p>\n",
+    "possibleSolutions": "<p><a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference/registration\">Register the phone number</a> before trying again.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 133015,
+    "title": "<p><code>133015</code> - Please wait a few minutes before attempting to register this phone number</p>",
+    "description": "<p>The phone number you are attempting to register was recently deleted, and deletion has not yet completed.</p>\n",
+    "possibleSolutions": "<p>Wait 5 minutes before re-trying the request.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 135000,
+    "title": "<p><code>135000</code> - Generic user error</p>",
+    "description": "<p>Message failed to send because of an unknown error with your request parameters.</p>\n",
+    "possibleSolutions": "<p>See the endpoint's <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference\">reference</a> to determine if you are querying the endpoint using the correct syntax.  Contact <a target=\"_blank\" href=\"https://developers.facebook.com/support\">customer support</a> if you continue receiving this error code in response.</p>\n",
+    "src": "cloudapi"
+  },
+  {
+    "errorcode": 400,
+    "title": "<p><code>400</code> - Media download error</p>\n",
+    "description": "<p>Failed to download the media from the sender.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 402,
+    "title": "<p><code>402</code> - Business eligibility — Payment issue</p>\n",
+    "description": "<p>Message failed to send because there were one or more errors related to your payment method.</p>\n\n<ul>\n<li>Payment account is not attached to a WhatsApp Account</li>\n<li>Credit line is over the limit</li>\n<li>Credit line (Payment account) not set or active</li>\n<li>WhatsApp Business Account is deleted</li>\n<li>Account has been suspended by us</li>\n<li>Timezone not set</li>\n<li>Currency not set</li>\n<li>MessagingFor request (On Behalf Of (OBO)) is pending or declined</li>\n<li>Exceeded conversation free tier threshold without a valid payment method. (This error type goes live on February 1, 2022).</li>\n</ul>\n\n<p>Check your payment setup in WhatsApp Manager and try again.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 408,
+    "title": "<p><code>408</code> - Message is not valid</p>\n",
+    "description": "<p>Message failed to send because it was pending for too long (i.e., &gt; 1 day).\nThis is expected if the WhatsApp Business API client is down for more than a day, then restarted.</p>\n<br><p>Resend the message.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 410,
+    "title": "<p><code>410</code> - Message expired</p>\n",
+    "description": "<p>Message failed to send during its Time To Live (TTL) duration.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 429,
+    "title": "<p><code>429</code> - Rate limit hit</p>\n",
+    "description": "<ul>\n<li><p><strong>For outgoing messages:</strong> Message failed to send because there were too many messages sent from this phone number in a short period of time.<br>\nResend the failed messages.</p></li>\n<li><p><strong>For incoming messages:</strong> Failed to download media successfully due to rate-limiting.  Ask the sender to resend the message.</p></li>\n</ul>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 430,
+    "title": "<p><code>430</code> - Unsigned certificate</p>\n",
+    "description": "<p>Message failed to send because there was an error related to your certificate.</p>\n<br><p>Download a new certificate from the WhatsApp Manager and re-register.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 432,
+    "title": "<p><code>432</code> - Certificate ID mismatch</p>\n",
+    "description": "<p>Message failed to send because there was an error related to your certificate.</p>\n<br><p>Download a new certificate from the WhatsApp Manager and re-register.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 433,
+    "title": "<p><code>433</code> - Certificate signature invalid</p>\n",
+    "description": "<p>Occurs when a message is sent but the business client's certificate is not properly signed using the client's identity keys. This likely indicates that the client re-registered with new identity keys but did not go through the full certificate creation flow.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 470,
+    "title": "<p><code>470</code> - Re-engagement message</p>\n",
+    "description": "<p>Message failed to send because more than 24 hours have passed since the customer last replied to this number.</p>\n<br><p>Use a message template to respond.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 471,
+    "title": "<p><code>471</code> - Spam rate limit hit</p>\n",
+    "description": "<p>Message failed to send because there are restrictions on how many messages can be sent from this phone number. This may be because too many previous messages were blocked or flagged as spam.</p>\n<br><p>Check your quality status in the WhatsApp Manager. See the <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/api/rate-limits/quality-limits\">Quality-Based Rate Limits documentation</a> for more information.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 472,
+    "title": "<p><code>472</code> - User's number is part of an experiment</p>\n",
+    "description": "<p>Failed to send a message because this user's phone number is part of an <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/on-premises/guides/experiments\">experiment</a>.</p>\n<br><p>Skip sending messages to this user.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 480,
+    "title": "<p><code>480</code> - User potentially changed</p>\n",
+    "description": "<p>Message failed to send since the user with this phone number has potentially changed.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 500,
+    "title": "<p><code>500</code> - Generic error</p>\n",
+    "description": "<p>Message failed to send because of an unknown error.</p>\n<br><p>Try again later.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 501,
+    "title": "<p><code>501</code> - Message type is not currently supported.</p>\n",
+    "description": "<p>Document messages with captions are currently not supported.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1000,
+    "title": "<p><code>1000</code> - Generic error</p>\n",
+    "description": "",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1001,
+    "title": "<p><code>1001</code> - Message too long</p>\n",
+    "description": "<p>Message length exceeds 4096 characters.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1002,
+    "title": "<p><code>1002</code> - Invalid recipient type</p>\n",
+    "description": "<p>Valid recipient types:</p>\n\n<ul>\n<li><code>individual</code></li>\n</ul>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1004,
+    "title": "<p><code>1004</code> - Resource already exists</p>\n",
+    "description": "<p>Possible UUID conflict for media upload request or media with that UUID already exists.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1005,
+    "title": "<p><code>1005</code> - Access denied</p>\n",
+    "description": "<ul>\n<li>Media directory is not writable (upload request), or </li>\n<li>Invalid credentials, or </li>\n<li>Certificate Error, or</li>\n<li>App Expired: a version upgrade is required, or</li>\n<li><code>button</code> messages are disabled for this account, or</li>\n<li>Number is already registered on WhatsApp (see <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/guides/phone-number#migrate\">Migrating a Phone Number</a> for information on moving a phone number from WhatsApp to the WhatsApp Business API), or</li>\n<li>If your business sends commerce messages in India, make sure that you have completed all mandatory business profile and product item fields. For more information, see <a target=\"_blank\" href=\"https://www.facebook.com/business/help/1104628230079278\">https://www.facebook.com/business/help/1104628230079278</a>.</li>\n</ul>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1006,
+    "title": "<p><code>1006</code> - Resource not found</p>\n",
+    "description": "<p>File or resource not found</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1007,
+    "title": "<p><code>1007</code> - Recipient blocked to receive message (<em>Deprecated</em>)</p>\n",
+    "description": "<p>Recipient is not on the allow list</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1008,
+    "title": "<p><code>1008</code> - Required parameter is missing</p>\n",
+    "description": "<p>Missing a required parameter.</p>\n<br><p>If you’re trying to send a <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/guides/interactive-messages\">List Message</a>, it’s possible that you missed the <code>title</code> part of the <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/api/messages#section-object\"><code>section</code></a> object or <code>ID</code>s for your <code>rows</code>.</p>\n<br><p>If you’re trying to send a Single Product Message or a Multi-Product Message, it’s possible that you missed the <code>catalog_id</code> or the <code>product_retailer_id</code>. Both of those fields are required for this type of message.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1009,
+    "title": "<p><code>1009</code> - Parameter value is not valid</p>\n",
+    "description": "<p>Value entered for a parameter is of the wrong type or other problem.</p>\n<br><p>If you’re trying to send a <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/guides/interactive-messages\">List Message</a>, check if each row’s ID is unique.</p>\n<br><p>If you’re trying to send a Single Product Message, it’s possible that you have sent the wrong <code>catalog_id</code>. Please go back to the Commerce Manager and check it again.</p>\n<br><p>If you’re trying to send a Multi-Product Message, check that your <code>product_retailer_id</code> is unique per section. Also make sure the <code>header</code> and <code>body</code> objects are present and have an assigned value.</p>\n<br>",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1010,
+    "title": "<p><code>1010</code> - Parameter is not required</p>\n",
+    "description": "<p>Contains a parameter that is not required.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1011,
+    "title": "<p><code>1011</code> - Service not ready</p>\n",
+    "description": "",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1013,
+    "title": "<p><code>1013</code> - User is not valid</p>\n",
+    "description": "",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1014,
+    "title": "<p><code>1014</code> - Internal error</p>\n",
+    "description": "<ul>\n<li>Upload failed on bad image (image not uploaded correctly) or endpoint not found</li>\n<li>Hash you provided does not match user’s latest hash</li>\n</ul>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1015,
+    "title": "<p><code>1015</code> - Too many requests</p>\n",
+    "description": "<p>Client-side rate limit has been hit</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1016,
+    "title": "<p><code>1016</code> - System overloaded</p>\n",
+    "description": "<p>If the system is under heavy load, this error is returned to allow the system to recover from the load.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1017,
+    "title": "<p><code>1017</code> - Not Primary Master</p>\n",
+    "description": "<p>This error occurs when a master-only request, such as set settings, get settings, import, export, code request, register, etc. is sent to a node that is not a primary master. This could happen when the WhatsApp Business API Client is not setup properly or internal errors.</p>\n<br><p>Retrying the request should resolve this error. If this does not resolve the error, contact support.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1018,
+    "title": "<p><code>1018</code> - Not Primary Coreapp</p>\n",
+    "description": "<p>This error occurs when requests are sent to a Coreapp node that is not the shard owner or in the process to become the shard owner. You might see this error when we are doing shard failover in the multiconnect setup.</p>\n<br><p>Retrying the request should resolve this error most of the time. If not, contact Support.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1021,
+    "title": "<p><code>1021</code> - Bad User</p>\n",
+    "description": "<p>This error occurs when you send a message to yourself.<br>\nTo resolve, send the message to a number that is not your own.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1022,
+    "title": "<p><code>1022</code> - Webhooks URL is not configured</p>\n",
+    "description": "<p>This error occurs if you have not configured the REST API Webhooks format.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1023,
+    "title": "<p><code>1023</code> - Database error occurred</p>\n",
+    "description": "",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1024,
+    "title": "<p><code>1024</code> - Password Change Required</p>\n",
+    "description": "<p>You are required to change your password.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1025,
+    "title": "<p><code>1025</code> - Invalid Request</p>\n",
+    "description": "<p>The request is not valid.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1026,
+    "title": "<p><code>1026</code> - Receiver Incapable</p>\n",
+    "description": "<p>Message Undeliverable.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1028,
+    "title": "<p><code>1028</code> - A <code>user_identity_changed</code> system notification requires acknowledgement</p>\n",
+    "description": "<p>You sent a message to a WhatsApp user who has potentially changed, and a <code>user_identity_changed</code> system notification was sent to you and is pending acknowledgement.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 1031,
+    "title": "<p><code>1031</code> - Sender account has been locked</p>\n",
+    "description": "<p>Your account has been locked to send any messages due to an integrity policy violation. See <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/overview/policy-enforcement\">WhatsApp Business Platform Policy Enforcement</a> for information.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2000,
+    "title": "<p><code>2000</code> - Template Param Count Mismatch</p>\n",
+    "description": "<p>Number of parameters provided does not match the expected number of parameters.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2001,
+    "title": "<p><code>2001</code> - Template Missing</p>\n",
+    "description": "<p>Template status is not active, or template does not exist for a language and locale.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2002,
+    "title": "<p><code>2002</code> - Template Fetch Failed</p>\n",
+    "description": "<p>The receiver failed to download the template.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2003,
+    "title": "<p><code>2003</code> - Template Pack Missing</p>\n",
+    "description": "<p>No templates exist for a specific language and locale.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2004,
+    "title": "<p><code>2004</code> - Template Param Length Too Long</p>\n",
+    "description": "<p>Parameter length too long</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2005,
+    "title": "<p><code>2005</code> - Template Hydrated Text Too Long</p>\n",
+    "description": "<p>Translated text too long</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2006,
+    "title": "<p><code>2006</code> - Template White Space Policy Violated</p>\n",
+    "description": "<p>Whitespace policy violated</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2007,
+    "title": "<p><code>2007</code> - Template Format Character Policy Violated</p>\n",
+    "description": "<p>Format character policy violated</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2008,
+    "title": "<p><code>2008</code> - Template Media Format Unsupported</p>\n",
+    "description": "<p>Media format used is unsupported</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2009,
+    "title": "<p><code>2009</code> - Template Required Component Missing</p>\n",
+    "description": "<p>Required component in the Template is missing</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2010,
+    "title": "<p><code>2010</code> - Template Invalid Hydrated URL</p>\n",
+    "description": "<p>URL in button component is invalid</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2011,
+    "title": "<p><code>2011</code> - Template Invalid Phone Number</p>\n",
+    "description": "<p>Phone Number in button component is invalid</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2012,
+    "title": "<p><code>2012</code> - Template Parameter Format Mismatch</p>\n",
+    "description": "<p>Parameter format does not match format in the created Template</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2013,
+    "title": "<p><code>2013</code> - Template Buttons Unsupported</p>\n",
+    "description": "<p>Buttons are unsupported by the receiver</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2014,
+    "title": "<p><code>2014</code> - Expected Namespace is Empty</p>\n",
+    "description": "<p>This error happens when a template message language pack has not been downloaded yet.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2015,
+    "title": "<p><code>2015</code> - Invalid number of sections</p>\n",
+    "description": "<p>Message request contains below minimum or above the maximum number of sections. See <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/api/messages#section-object\"><code>section</code> object</a> for more information.</p>\n<br><p>You need to have at least 1 <code>section</code> object and you can have up to 10.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2016,
+    "title": "<p><code>2016</code> - Invalid number of rows</p>\n",
+    "description": "<p>There is an invalid number of rows. For <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/guides/interactive-messages#list-messages\">List Messages</a>, there must be at least one <code>rows</code> object per <code>section</code>.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2017,
+    "title": "<p><code>2017</code> - Character Policy Violated</p>\n",
+    "description": "<p>Format character policy has been violated.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2023,
+    "title": "<p><code>2023</code> -  Invalid number of product</p>\n",
+    "description": "<p>The section object has no products or the total product count has exceeded the maximum allowed number.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2024,
+    "title": "<p><code>2024</code> - Catalog ID not found</p>\n",
+    "description": "<p>The catalog ID you provided either does not exist or does not belong to your WhatsApp Business Account (WABA).</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2025,
+    "title": "<p><code>2025</code> - Catalog ID not linked to API number</p>\n",
+    "description": "<p>The catalog ID you provided is not connected to the phone number you are using to send a message.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2026,
+    "title": "<p><code>2026</code> - Missing products</p>\n",
+    "description": "<p>Some products provided in your request were not found in the catalog.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2027,
+    "title": "<p><code>2027</code> - No products found</p>\n",
+    "description": "<p>No products were found in the catalog you provided.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2028,
+    "title": "<p><code>2028</code> - List all products failed compliance</p>\n",
+    "description": "<p><em>Only available for businesses in India.</em></p>\n\n<p>This error is returned when a business sends a Single Product Message with missing and incomplete e-commerce compliance information.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2029,
+    "title": "<p><code>2029</code> - List some products failed compliance</p>\n",
+    "description": "<p><em>Only available for businesses in India.</em></p>\n\n<p>This error is returned when a business sends a Multi-product message with missing and incomplete e-commerce compliance information.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2030,
+    "title": "<p><code>2030</code> - List mixed products invalid and failed compliance</p>\n",
+    "description": "<p><em>Only available for businesses in India.</em></p>\n\n<p>This error is returned when a business sends a Multi-product message where there is a mix of invalid products and products with missing compliance information.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2036,
+    "title": "<p><code>2036</code> - Invalid Header Structure</p>\n",
+    "description": "<p>Returned when the <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/api/messages#header-object\"><code>header</code> object</a> structure is invalid.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2050,
+    "title": "<p><code>2050</code> - Missing Compliance Info</p>\n",
+    "description": "<p><em>Only available for businesses in India.</em></p>\n\n<p>This error is returned when a business has not provided any compliance information. See the <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/api/settings/business-compliance-info\">Business Compliance</a> endpoint.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2061,
+    "title": "<p><code>2061</code> - Template Paused</p>\n",
+    "description": "<p>Template status is <code>PAUSED</code> so cannot be sent.</p>\n",
+    "src": "onpremises"
+  },
+  {
+    "errorcode": 2062,
+    "title": "<p><code>2062</code> - Template Disabled</p>\n",
+    "description": "<p>Template status is <code>DISABLED</code> so cannot be sent.</p>\n",
+    "src": "onpremises"
+  }
+]
