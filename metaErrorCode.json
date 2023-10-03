@@ -79,8 +79,8 @@
     {
         "errorcode": 131031,
         "title": "<p><code>131031</code> - Account has been locked</p>",
-        "description": "<p>The WhatsApp Business Account associated with the app has been restricted or disabled for violating a platform policy, or we were unable to verify data included in the request against data set on the WhatsApp Business Account (e.g, the two-step pin included in the request is incorrect).</p>\n",
-        "possibleSolutions": "<p>See the <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/overview/policy-enforcement\">Policy Enforcement</a> document to learn about policy violations and how to resolve them.</p>\n",
+        "description": "<p>Your WhatsApp Business Account, which is connected to the app, is facing some issues. This could be because it violated certain rules or policies set by WhatsApp, or there's a problem with the information provided in the request, like an incorrect two-step pin.</p>\n",
+        "possibleSolutions": "<p>To understand more about what went wrong and how to fix it, you can check the <a href=\"https://developers.facebook.com/docs/whatsapp/overview/policy-enforcement\">Policy Enforcement document.</a> This document explains the rules and policies and provides guidance on how to resolve any violations or errors. It's like a guidebook to help you get your WhatsApp Business Account back on track.</p>\n",
         "src": "cloudapi"
     },
     {
@@ -121,8 +121,8 @@
     {
         "errorcode": 131000,
         "title": "<p><code>131000</code> - Something went wrong</p>",
-        "description": "<p>Message failed to send due to an unknown error.</p>\n",
-        "possibleSolutions": "<p>Try again. If the error persists,  open a <a target=\"_blank\" href=\"https://business.facebook.com/direct-support\">Direct Support</a> ticket.</p>\n",
+        "description": "<p>Message failed to send due to an unknown error. This error means that your message couldn't be sent, but the system doesn't know exactly why it failed.</p>\n",
+        "possibleSolutions": "<p>Kindly wait for 10mins and if the issue persists Raise a ticket to support by click on help in left panel</p>\n",
         "src": "cloudapi"
     },
     {
@@ -170,8 +170,8 @@
     {
         "errorcode": 131042,
         "title": "<p><code>131042</code> - Business eligibility payment issue</p>",
-        "description": "<p>Message failed to send because there were one or more errors related to your payment method.</p>\n",
-        "possibleSolutions": "<p>See <a target=\"_blank\" href=\"https://www.facebook.com/business/help/2225184664363779\">About Billing For Your WhatsApp Business Account</a> and verify that you have set up billing correctly.</p>\n<br><p>Common problems:</p>\n<br><ul>\n<li>Payment account is not attached to a WhatsApp Business Account</li>\n<li>Credit line is over the limit</li>\n<li>Credit line (Payment Account) not set or active</li>\n<li>WhatsApp Business Account is deleted</li>\n<li>WhatsApp Business Account is suspended</li>\n<li>Timezone not set</li>\n<li>Currency not set</li>\n<li>MessagingFor request (On Behalf Of) is pending or declined</li>\n<li>Exceeded conversation free tier threshold without a valid payment method</li>\n</ul>\n",
+        "description": "<p><p>Your message couldn't be sent because there's an issue with your payment method for your WhatsApp Business Account. To fix this, you should go to the 'Billing For Your Gallabox Account' and make sure you've set up your billing correctly.</p>\n\n<p>Here are some common problems that could be causing this issue:</p>\n\n<ol><li>Your payment account isn't linked to your WhatsApp Business Account.</li><li>You've exceeded your credit limit (the amount of money you can spend) on your account.</li><li>Your credit line (the payment account) isn't set up or isn't active.</li><li>Your WhatsApp Business Account might have been deleted or suspended for some reason.</li><li>You haven't set your timezone or currency correctly.</li><li>There might be an issue with your request to send messages on behalf of someone else.</li><li>You've sent too many messages without a valid payment method, going beyond the free allowance.</li></ol><p>By checking these common problems and making sure your billing information is set up correctly, you should be able to resolve the issue and send messages successfully.</p></p>",
+        "possibleSolutions": "<p>Check if you have cleared all the previous dues. If you have no dues and still facing the error, connect with the Support team.</p>",
         "src": "cloudapi"
     },
     {
@@ -183,9 +183,9 @@
     },
     {
         "errorcode": 131047,
-        "title": "<p><code>131047</code> - Re-engagement message</p>",
-        "description": "<p>More than 24 hours have passed since the recipient last replied to the sender number.</p>\n",
-        "possibleSolutions": "<p>Send the recipient a business-initiated message using a <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates\">message template</a> instead.</p>\n",
+        "title": "<p><code>131047</code></p>\n\n<p>Re-engagement message</p>",
+        "description": "<p>Message failed to send because more than 24 hours have passed since the customer last replied to this number.Use a message template to respond.</p>\n",
+        "possibleSolutions": "<p>Use a template message to initiate a conversation or ask the user to initiate a message to the whatsapp number</p>\n",
         "src": "cloudapi"
     },
     {
@@ -198,7 +198,7 @@
     {
         "errorcode": 131052,
         "title": "<p><code>131052</code> - Media download error</p>",
-        "description": "<p>Unable to download the media sent by the user.</p>\n",
+        "description": "<p>Unable to download the media sent by the user. This happens when the customer sends a file that is greater than 100MB</p>\n",
         "possibleSolutions": "<p>We were unable to download the media for one or more reasons, such as an <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/cloud-api/reference/media#supported-media-types\">unsupported media type</a>. Refer to the <code>error.error_data.details</code> value for more information about why we were unable to download the media.</p>\n",
         "src": "cloudapi"
     },
@@ -336,7 +336,8 @@
     {
         "errorcode": 408,
         "title": "<p><code>408</code> - Message is not valid</p>\n",
-        "description": "<p>Message failed to send because it was pending for too long (i.e., &gt; 1 day).\nThis is expected if the WhatsApp Business API client is down for more than a day, then restarted.</p>\n<br><p>Resend the message.</p>\n",
+        "description": "<p>Message failed to send because it was pending for too long (i.e., > 1 day). This is expected if the WhatsApp Business API client is down for more than a day, then restarted.Resend the message.</p>\n",
+        "possibleSolutions": "<p>Please retry sending this message after 15mins</p>\n",
         "src": "onpremises"
     },
     {
@@ -379,7 +380,8 @@
     {
         "errorcode": 471,
         "title": "<p><code>471</code> - Spam rate limit hit</p>\n",
-        "description": "<p>Message failed to send because there are restrictions on how many messages can be sent from this phone number. This may be because too many previous messages were blocked or flagged as spam.</p>\n<br><p>Check your quality status in the WhatsApp Manager. See the <a target=\"_blank\" href=\"https://developers.facebook.com/docs/whatsapp/api/rate-limits/quality-limits\">Quality-Based Rate Limits documentation</a> for more information.</p>\n",
+        "description": "<p>Your message couldn't be sent because there are limits on how many messages can be sent from your phone number. This might have happened because too many of your previous messages were blocked or marked as spam by WhatsApp.</p>\n",
+        "possibleSolutions": "<p>To understand and improve your messaging quality, you should check your 'quality status' in the WhatsApp Manager. You can find more detailed information on these limits and how to maintain good messaging practices in the 'Quality-Based Rate Limits documentation' It's like a guide that explains how to ensure your messages are delivered successfully without running into these restrictions.</p>",
         "src": "onpremises"
     },
     {
@@ -442,7 +444,8 @@
     {
         "errorcode": 1006,
         "title": "<p><code>1006</code> - Resource not found</p>\n",
-        "description": "<p>File or resource not found</p>\n",
+        "description": "<p>This error means that the file or item you're looking for can't be found. Whatever you were trying to access or use is not available.</p>\n",
+        "possibleSolutions": "<p>Check if you have uploaded </p>",
         "src": "onpremises"
     },
     {
@@ -472,7 +475,8 @@
     {
         "errorcode": 1011,
         "title": "<p><code>1011</code> - Service not ready</p>\n",
-        "description": "",
+        "description": "<p>This error means the service you're trying to access is currently not working because it's either experiencing technical problems (downtime) or it's getting too many requests all at once (overloaded).</p>\n",
+        "possibleSolutions": "<p>Please retry sending this message after 15mins</p>\n",
         "src": "onpremises"
     },
     {
@@ -527,7 +531,8 @@
     {
         "errorcode": 1023,
         "title": "<p><code>1023</code> - Database error occurred</p>\n",
-        "description": "",
+        "description": "<p>This message simply means that there was a problem with the database, the database had an issue or error, which might cause problems with retrieving or saving information.</p>",
+        "possibleSolutions": "<p>Kindly wait for 10mins and if the issue persists Raise a ticket to support by click on help in left panel</p>",
         "src": "onpremises"
     },
     {
@@ -612,7 +617,8 @@
     {
         "errorcode": 2008,
         "title": "<p><code>2008</code> - Template Media Format Unsupported</p>\n",
-        "description": "<p>Media format used is unsupported</p>\n",
+        "description": "<p>This message means that the type of media (like a picture, or a video file) you're trying to use is not supported by the platform or application – the format is not compatible, so it can't be used.</p>\n",
+        "possibleSolutions": "<p>See if you have uploaded the right media format in the message template.</p>\n<p>For Image Accepted file types are - .JPEG, .JPG,.PNG within 5MB size</p>\n<p>For Video Accepted file types are .mp4,.3gpp within 10MB size</p>\n<p>For Document Accepted file types are .PDF within 10MB size</p>\n",
         "src": "onpremises"
     },
     {
@@ -684,7 +690,8 @@
     {
         "errorcode": 2025,
         "title": "<p><code>2025</code> - Catalog ID not linked to API number</p>\n",
-        "description": "<p>The catalog ID you provided is not connected to the phone number you are using to send a message.</p>\n",
+        "description": "<p>The catalog ID you gave doesn't match the phone number you're using to send a message.</p>\n",
+        "possibleSolutions": "<p>See if right catalog is connected with your WhatsApp Business Number in Gallabox. If not, try raising a ticket to support.</p>",
         "src": "onpremises"
     },
     {
@@ -696,13 +703,15 @@
     {
         "errorcode": 2027,
         "title": "<p><code>2027</code> - No products found</p>\n",
-        "description": "<p>No products were found in the catalog you provided.</p>\n",
+        "description": "<p>The catalog you shared doesn't contain any products.If you were trying to find or display products from that catalog, there's nothing there to show.</p>\n",
+        "possibleSolutions": "<p>Try reviewing if you have connected the right catalog with Gallabox.  If you have connected the right catalog and it is still shosing error, raise a ticket with the Support.</p>",
         "src": "onpremises"
     },
     {
         "errorcode": 2028,
         "title": "<p><code>2028</code> - List all products failed compliance</p>\n",
-        "description": "<p><em>Only available for businesses in India.</em></p>\n\n<p>This error is returned when a business sends a Single Product Message with missing and incomplete e-commerce compliance information.</p>\n",
+        "description": "<p><em>Only available for businesses in India.</em></p>\n\n<p>This error is returned when a business tried to send a message that includes information about a single product, but they didn't provide all the necessary details and information required for e-commerce compliance.</p>\n",
+        "possibleSolutions": "<p>Check if you have updated the Compliance Info on Gallabox. If not, Go to WhatsApp Manager and update the info.</p>",
         "src": "onpremises"
     },
     {
